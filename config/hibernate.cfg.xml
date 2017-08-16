@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+
+
+<hibernate-configuration>
+<session-factory>
+
+	<property name="hibernate.show_sql">true</property>
+	<property name="hibernate.format_sql">true</property>
+
+	<property name="hibernate.connection.autocommit">true</property>
+	<!-- 数据库信息（连接信息写到spring的配置文件中） -->
+	<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+	<!--
+		<property name="connection.url">jdbc:mysql:///itcastoa_20120216</property> <property name="connection.driver_class">com.mysql.jdbc.Driver</property> <property
+		name="connection.username">root</property> <property name="connection.password">root</property>
+	-->
+	
+	<!-- 其他配置 -->
+	<mapping class="com.hb.entity.OaUser"/>
+	<mapping class="com.hb.entity.OaSign"/>
+	<mapping class="com.hb.entity.OaApplicationStatus"/>
+	<mapping class="com.hb.entity.OaApplication"/>
+	<mapping class="com.hb.entity.OaApproval"/>
+	<mapping class="com.hb.entity.OaApprovalStatus"/>
+	<mapping class="com.hb.entity.OaDepartment"/>
+	<mapping class="com.hb.entity.OaMeet"/>
+	
+	
+	
+</session-factory>
+
+
+</hibernate-configuration>
